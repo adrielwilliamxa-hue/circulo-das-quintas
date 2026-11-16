@@ -1,0 +1,7 @@
+node_modules
+dist
+teste-local/*.md
+teste-local/conferencia
+teste-local/auditoria
+ferramentas/.venv-*
+.superpowers

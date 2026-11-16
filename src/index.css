@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  --madeira: #f3ebdd;
+  --madeira-borda: #8b5a2b;
+  --fundo: #faf8f4;
+  --painel: #ffffff;
+  --borda: rgba(0, 0, 0, 0.14);
+  --texto: #1f1e1c;
+  --texto-suave: #5f5e5a;
+  --casa: #cde9f8;
+  --casa-borda: #3a8fc7;
+  --casa-texto: #0c3b5e;
+  --sair: #f2d7e6;
+  --sair-borda: #cc79a7;
+  --sair-texto: #5e1f40;
+  --voltar: #f8e1b0;
+  --voltar-borda: #e69f00;
+  --voltar-texto: #5c3a00;
+  --foco: #1f6fb5;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: system-ui, "Segoe UI", sans-serif;
+  font-size: 15px;
+}
+
+button,
+select,
+input {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 2px;
+}
+
+[popover] {
+  max-width: 340px;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 12px 14px;
+  background: var(--painel);
+  color: var(--texto);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.painel {
+  background: var(--painel);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.rotulo {
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+.botao {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 4px 10px;
+  background: var(--painel);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.botao:hover {
+  background: #f1efe8;
+}
+
+.botao[aria-pressed='true'],
+.botao[aria-selected='true'] {
+  border: 2px solid var(--texto);
+  padding: 3px 9px;
+  font-weight: 600;
+}
+
+.botao-porque {
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 0 8px;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--texto-suave);
+}
+
+.aviso {
+  border: 1px solid #e69f00;
+  background: #fdf3df;
+  color: #5c3a00;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

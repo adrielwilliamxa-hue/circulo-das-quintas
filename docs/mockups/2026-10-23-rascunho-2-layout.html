@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rascunho 2 — layout da v0.5</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+:root{--surface-1:#f1efe8;--surface-2:#ffffff;--border:rgba(0,0,0,.12);--border-strong:rgba(0,0,0,.22);--border-accent:#378ADD;--bg-accent:#E6F1FB;--text-accent:#0C447C;--text-primary:#1f1e1c;--text-secondary:#5f5e5a;--radius:8px}
+body{margin:0;padding:24px;background:#faf9f6;color:var(--text-primary);font-family:system-ui,"Segoe UI",sans-serif;max-width:760px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.th{font-weight:500;fill:var(--text-primary);font-size:14px}.ts{fill:var(--text-secondary);font-size:12px}
+p.nota{font-size:13px;color:var(--text-secondary)}
+</style>
+</head>
+<body>
+<p class="nota">Rascunho 2 aprovado em 23/10/2026 (mostrado no chat). Exemplo: Dó maior, acorde G tocando no loop. Ajustes posteriores ao rascunho: a legenda do teclado agora usa "nota do acorde / nota de tensão / nota de passagem" (ver design §6.7), e o app ganhou as abas Prática e Testes (§6.9, §6.10).</p>
+<h2 class="sr-only">Rascunho 2 da tela: círculo no estilo da roda de madeira com três anéis e janela, acordes coloridos por função com ícones, faixa de tempo do loop e teclado maior com marcas por forma.</h2>
+<div style="border:0.5px solid var(--border-strong);border-radius:12px;padding:12px;background:var(--surface-1)">
+<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:8px 12px;background:var(--surface-2);border:0.5px solid var(--border);border-radius:var(--radius);font-size:13px">
+<span style="font-weight:500">Círculo</span>
+<span style="color:var(--text-secondary)">Tom:</span><span style="border:0.5px solid var(--border-strong);border-radius:var(--radius);padding:2px 8px">Dó maior <i class="ti ti-chevron-down" aria-hidden="true"></i></span>
+<span style="border:0.5px solid var(--border-strong);border-radius:var(--radius);padding:2px 8px">Maior | menor</span>
+<span style="margin-left:auto;display:flex;align-items:center;gap:8px"><i class="ti ti-player-play" aria-hidden="true" style="font-size:18px"></i>Loop: C – G – Am – F<span style="color:var(--text-secondary)">70 bpm</span></span>
+</div>
+<div style="display:grid;grid-template-columns:300px minmax(0,1fr);gap:12px;margin-top:12px">
+<div style="background:var(--surface-2);border:0.5px solid var(--border);border-radius:var(--radius);padding:6px">
+<svg viewBox="0 -4 300 308" width="100%" role="img"><title>Círculo das quintas em três anéis</title><desc>Anel de fora com acordes diminutos, anel do meio com menores, anel de dentro com maiores; a janela mostra os sete acordes de Dó maior</desc>
+<circle cx="150" cy="150" r="148" fill="#F3EBDD" stroke="#8B5A2B" stroke-width="1"/>
+<path d="M82.83 82.83 A95 95 0 0 1 125.41 58.24 L135.77 96.88 A55 55 0 0 0 111.11 111.11 Z" fill="#F2D7E6" stroke="#CC79A7" stroke-width="1.5"/>
+<path d="M125.41 58.24 A95 95 0 0 1 174.59 58.24 L164.23 96.88 A55 55 0 0 0 135.77 96.88 Z" fill="#CDE9F8" stroke="#3A8FC7" stroke-width="1.5"/>
+<path d="M174.59 58.24 A95 95 0 0 1 217.17 82.83 L188.89 111.11 A55 55 0 0 0 164.23 96.88 Z" fill="#F8E1B0" stroke="#E69F00" stroke-width="2.5"/>
+<path d="M61.61 61.61 A125 125 0 0 1 117.65 29.26 L125.41 58.24 A95 95 0 0 0 82.83 82.83 Z" fill="#F2D7E6" stroke="#CC79A7" stroke-width="1.5"/>
+<path d="M117.65 29.26 A125 125 0 0 1 182.35 29.26 L174.59 58.24 A95 95 0 0 0 125.41 58.24 Z" fill="#CDE9F8" stroke="#3A8FC7" stroke-width="1.5"/>
+<path d="M182.35 29.26 A125 125 0 0 1 238.39 61.61 L217.17 82.83 A95 95 0 0 0 174.59 58.24 Z" fill="#CDE9F8" stroke="#3A8FC7" stroke-width="1.5"/>
+<path d="M111.70 7.05 A148 148 0 0 1 188.30 7.05 L182.35 29.26 A125 125 0 0 0 117.65 29.26 Z" fill="#F8E1B0" stroke="#E69F00" stroke-width="1.5"/>
+<g stroke="#B89B72" stroke-width="0.6">
+<line x1="203.12" y1="135.77" x2="292.95" y2="111.70"/><line x1="203.12" y1="164.23" x2="292.95" y2="188.30"/><line x1="188.89" y1="188.89" x2="254.65" y2="254.65"/><line x1="164.23" y1="203.12" x2="188.30" y2="292.95"/><line x1="135.77" y1="203.12" x2="111.70" y2="292.95"/><line x1="111.11" y1="188.89" x2="45.35" y2="254.65"/><line x1="96.88" y1="164.23" x2="7.05" y2="188.30"/><line x1="96.88" y1="135.77" x2="7.05" y2="111.70"/>
+</g>
+<circle cx="150" cy="150" r="125" fill="none" stroke="#B89B72" stroke-width="0.6"/>
+<circle cx="150" cy="150" r="95" fill="none" stroke="#B89B72" stroke-width="0.6"/>
+<circle cx="150" cy="150" r="55" style="fill:var(--surface-2)" stroke="#8B5A2B" stroke-width="1"/>
+<path d="M111.11 111.11 L61.61 61.61 A125 125 0 0 1 117.65 29.26 L111.70 7.05 A148 148 0 0 1 188.30 7.05 L182.35 29.26 A125 125 0 0 1 238.39 61.61 L188.89 111.11 A55 55 0 0 0 111.11 111.11 Z" fill="none" stroke="#8B5A2B" stroke-width="4" stroke-linejoin="round"/>
+<g text-anchor="middle" dominant-baseline="central" style="fill:#3B2A1A">
+<text x="112.5" y="80" style="fill:#2C2C2A;font-size:16px;font-weight:500">F</text><text x="112.5" y="95" style="fill:#2C2C2A;font-size:11px">IV</text>
+<text x="150" y="70" style="fill:#2C2C2A;font-size:16px;font-weight:500">C</text><text x="150" y="85" style="fill:#2C2C2A;font-size:11px">I</text>
+<text x="187.5" y="80" style="fill:#2C2C2A;font-size:16px;font-weight:500">G</text><text x="187.5" y="95" style="fill:#2C2C2A;font-size:11px">V</text>
+<text x="95" y="50" style="fill:#2C2C2A;font-size:13px;font-weight:500">Dm</text><text x="98" y="63" style="fill:#2C2C2A;font-size:11px">ii</text>
+<text x="150" y="38" style="fill:#2C2C2A;font-size:13px;font-weight:500">Am</text><text x="150" y="51" style="fill:#2C2C2A;font-size:11px">vi</text>
+<text x="205" y="50" style="fill:#2C2C2A;font-size:13px;font-weight:500">Em</text><text x="202" y="63" style="fill:#2C2C2A;font-size:11px">iii</text>
+<text x="150" y="17" style="fill:#2C2C2A;font-size:11px;font-weight:500">B° · vii°</text>
+<text x="214.95" y="112.5" style="font-size:14px;fill:#3B2A1A">D</text><text x="225" y="150" style="font-size:14px;fill:#3B2A1A">A</text><text x="214.95" y="187.5" style="font-size:14px;fill:#3B2A1A">E</text><text x="187.5" y="214.95" style="font-size:14px;fill:#3B2A1A">B</text><text x="150" y="225" style="font-size:14px;fill:#3B2A1A">F#</text><text x="112.5" y="214.95" style="font-size:14px;fill:#3B2A1A">Db</text><text x="85.05" y="187.5" style="font-size:14px;fill:#3B2A1A">Ab</text><text x="75" y="150" style="font-size:14px;fill:#3B2A1A">Eb</text><text x="85.05" y="112.5" style="font-size:14px;fill:#3B2A1A">Bb</text>
+<text x="245.26" y="95" style="font-size:11px;fill:#3B2A1A">Bm</text><text x="260" y="150" style="font-size:11px;fill:#3B2A1A">F#m</text><text x="245.26" y="205" style="font-size:11px;fill:#3B2A1A">C#m</text><text x="205" y="245.26" style="font-size:11px;fill:#3B2A1A">G#m</text><text x="150" y="260" style="font-size:11px;fill:#3B2A1A">Ebm</text><text x="95" y="245.26" style="font-size:11px;fill:#3B2A1A">Bbm</text><text x="54.74" y="205" style="font-size:11px;fill:#3B2A1A">Fm</text><text x="40" y="150" style="font-size:11px;fill:#3B2A1A">Cm</text><text x="54.74" y="95" style="font-size:11px;fill:#3B2A1A">Gm</text>
+<text x="218.5" y="31.35" style="font-size:11px;fill:#3B2A1A">F#°</text><text x="268.65" y="81.5" style="font-size:11px;fill:#3B2A1A">C#°</text><text x="287" y="150" style="font-size:11px;fill:#3B2A1A">G#°</text><text x="268.65" y="218.5" style="font-size:11px;fill:#3B2A1A">D#°</text><text x="218.5" y="268.65" style="font-size:11px;fill:#3B2A1A">A#°</text><text x="150" y="287" style="font-size:11px;fill:#3B2A1A">F°</text><text x="81.5" y="268.65" style="font-size:11px;fill:#3B2A1A">C°</text><text x="31.35" y="218.5" style="font-size:11px;fill:#3B2A1A">G°</text><text x="13" y="150" style="font-size:11px;fill:#3B2A1A">D°</text><text x="31.35" y="81.5" style="font-size:11px;fill:#3B2A1A">A°</text><text x="81.5" y="31.35" style="font-size:11px;fill:#3B2A1A">E°</text>
+</g>
+<text class="th" x="150" y="146" text-anchor="middle">Dó maior</text><text class="ts" x="150" y="163" text-anchor="middle">sem acidentes</text>
+</svg>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+<div style="background:var(--surface-2);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px">
+<div style="font-size:12px;color:var(--text-secondary);margin-bottom:8px">Acordes do tom, agrupados pelo que fazem</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;font-size:12px">
+<div style="background:#CDE9F8;border:1.5px solid #3A8FC7;border-radius:var(--radius);padding:6px 8px;color:#0C3B5E"><div style="font-weight:500"><i class="ti ti-home" aria-hidden="true"></i> Casa · tônica</div><div style="font-size:14px;font-weight:500">C · Am · Em</div><div>Repouso</div></div>
+<div style="background:#F2D7E6;border:1.5px solid #CC79A7;border-radius:var(--radius);padding:6px 8px;color:#5E1F40"><div style="font-weight:500"><i class="ti ti-arrow-up-right" aria-hidden="true"></i> Sair · subdominante</div><div style="font-size:14px;font-weight:500">F · Dm</div><div>Afasta de casa</div></div>
+<div style="background:#F8E1B0;border:3px solid #E69F00;border-radius:var(--radius);padding:4px 6px;color:#5C3A00"><div style="font-weight:500"><i class="ti ti-arrow-back-up" aria-hidden="true"></i> Voltar · dominante</div><div style="font-size:14px;font-weight:500">G · B°</div><div>Tensão, quer voltar</div></div>
+</div></div>
+<div style="background:var(--surface-2);border:0.5px solid var(--border);border-radius:var(--radius);padding:10px 12px;font-size:13px;line-height:1.6;flex:1">
+<div style="font-size:12px;color:var(--text-secondary);margin-bottom:4px">Acorde tocando agora</div>
+<div style="font-weight:500;font-size:15px;margin-bottom:6px"><i class="ti ti-arrow-back-up" aria-hidden="true"></i> G · cria tensão e quer voltar para o acorde C</div>
+<div><span style="color:var(--text-secondary)">Inversões:</span> G · <span style="font-weight:500">G/B (mais perto)</span> · G/D</div>
+<div><span style="color:var(--text-secondary)">Ponte:</span> D7 prepara o G</div>
+<div><span style="color:var(--text-secondary)">Cuidado:</span> a nota C raspa no B do acorde <span style="border:0.5px solid var(--border-strong);border-radius:var(--radius);padding:0 6px;font-size:12px">Por quê? <i class="ti ti-help" aria-hidden="true"></i></span></div>
+</div>
+</div>
+</div>
+<div style="background:var(--surface-2);border:0.5px solid var(--border);border-radius:var(--radius);padding:8px 10px;margin-top:12px;font-size:12px">
+<div style="color:var(--text-secondary);margin-bottom:6px">Faixa do loop</div>
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;text-align:center">
+<div style="background:#CDE9F8;border:1.5px solid #3A8FC7;border-radius:var(--radius);padding:4px;color:#0C3B5E"><span style="font-weight:500">C</span> · 4 tempos</div>
+<div style="background:#F8E1B0;border:3px solid #E69F00;border-radius:var(--radius);padding:2px;color:#5C3A00"><span style="font-weight:500">G</span> · tempo 2 de 4 · ● ● ○ ○</div>
+<div style="background:#CDE9F8;border:1.5px solid #3A8FC7;border-radius:var(--radius);padding:4px;color:#0C3B5E"><span style="font-weight:500">Am</span> · próximo</div>
+<div style="background:#F2D7E6;border:1.5px solid #CC79A7;border-radius:var(--radius);padding:4px;color:#5E1F40"><span style="font-weight:500">F</span> · 4 tempos</div>
+</div></div>
+<div style="background:var(--surface-2);border:0.5px solid var(--border);border-radius:var(--radius);padding:8px 10px;margin-top:12px">
+<div style="display:flex;font-size:12px;color:var(--text-secondary);margin-bottom:4px"><span style="width:33.3%;border-bottom:0.5px solid var(--border-strong);padding-bottom:2px">Mão esquerda: só o baixo</span><span style="width:4px"></span><span style="flex:1;border-bottom:0.5px solid var(--border-strong);padding-bottom:2px">Mão direita: acorde ou melodia</span></div>
+<svg viewBox="0 0 651 142" width="100%" role="img"><title>Teclado de três oitavas</title><desc>Marcas por forma: quadrado no baixo G, círculos cheios nas notas do acorde G, anéis nas notas de tensão, triângulo/seta na nota de passagem C</desc>
+<g stroke="#888780" stroke-width="0.75" fill="#FFFFFF">
+<rect x="0" y="0" width="31" height="138"/><rect x="31" y="0" width="31" height="138"/><rect x="62" y="0" width="31" height="138"/><rect x="93" y="0" width="31" height="138"/><rect x="124" y="0" width="31" height="138" fill="#F8E1B0"/><rect x="155" y="0" width="31" height="138"/><rect x="186" y="0" width="31" height="138"/>
+<rect x="217" y="0" width="31" height="138"/><rect x="248" y="0" width="31" height="138" fill="#F8E1B0"/><rect x="279" y="0" width="31" height="138"/><rect x="310" y="0" width="31" height="138"/><rect x="341" y="0" width="31" height="138" fill="#F8E1B0"/><rect x="372" y="0" width="31" height="138"/><rect x="403" y="0" width="31" height="138" fill="#F8E1B0"/>
+<rect x="434" y="0" width="31" height="138"/><rect x="465" y="0" width="31" height="138" fill="#F8E1B0"/><rect x="496" y="0" width="31" height="138"/><rect x="527" y="0" width="31" height="138"/><rect x="558" y="0" width="31" height="138" fill="#F8E1B0"/><rect x="589" y="0" width="31" height="138"/><rect x="620" y="0" width="31" height="138" fill="#F8E1B0"/>
+</g>
+<g fill="#2C2C2A">
+<rect x="21" y="0" width="20" height="84"/><rect x="52" y="0" width="20" height="84"/><rect x="114" y="0" width="20" height="84"/><rect x="145" y="0" width="20" height="84"/><rect x="176" y="0" width="20" height="84"/>
+<rect x="238" y="0" width="20" height="84"/><rect x="269" y="0" width="20" height="84"/><rect x="331" y="0" width="20" height="84"/><rect x="362" y="0" width="20" height="84"/><rect x="393" y="0" width="20" height="84"/>
+<rect x="455" y="0" width="20" height="84"/><rect x="486" y="0" width="20" height="84"/><rect x="548" y="0" width="20" height="84"/><rect x="579" y="0" width="20" height="84"/><rect x="610" y="0" width="20" height="84"/>
+</g>
+<rect x="131.5" y="98" width="16" height="16" fill="#2C2C2A"/>
+<g fill="#2C2C2A"><circle cx="263.5" cy="106" r="8"/><circle cx="356.5" cy="106" r="8"/><circle cx="418.5" cy="106" r="8"/><circle cx="480.5" cy="106" r="8"/><circle cx="573.5" cy="106" r="8"/><circle cx="635.5" cy="106" r="8"/></g>
+<g fill="none" stroke="#5F5E5A" stroke-width="2"><circle cx="294.5" cy="106" r="6"/><circle cx="325.5" cy="106" r="6"/><circle cx="387.5" cy="106" r="6"/><circle cx="511.5" cy="106" r="6"/><circle cx="542.5" cy="106" r="6"/><circle cx="604.5" cy="106" r="6"/></g>
+<g text-anchor="middle" font-size="18" font-weight="600" fill="#2C2C2A"><text x="232.5" y="112">→</text><text x="449.5" y="112">→</text></g>
+<g text-anchor="middle" font-size="11" fill="#5F5E5A">
+<text x="15.5" y="130">C</text><text x="46.5" y="130">D</text><text x="77.5" y="130">E</text><text x="108.5" y="130">F</text><text x="139.5" y="130">G</text><text x="170.5" y="130">A</text><text x="201.5" y="130">B</text>
+<text x="232.5" y="130">C</text><text x="263.5" y="130">D</text><text x="294.5" y="130">E</text><text x="325.5" y="130">F</text><text x="356.5" y="130">G</text><text x="387.5" y="130">A</text><text x="418.5" y="130">B</text>
+<text x="449.5" y="130">C</text><text x="480.5" y="130">D</text><text x="511.5" y="130">E</text><text x="542.5" y="130">F</text><text x="573.5" y="130">G</text><text x="604.5" y="130">A</text><text x="635.5" y="130">B</text>
+</g></svg>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px 14px;font-size:12px;margin-top:8px;line-height:1.5">
+<div><span style="font-weight:500">■ Baixo</span><br><span style="color:var(--text-secondary)">A nota grave da mão esquerda</span></div>
+<div><span style="font-weight:500">● Nota do acorde</span><br><span style="color:var(--text-secondary)">Pode parar e segurar</span></div>
+<div><span style="font-weight:500">○ Nota de tensão</span><br><span style="color:var(--text-secondary)">Colore; boa em tempo fraco</span></div>
+<div><span style="font-weight:500">→ Nota de passagem</span><br><span style="color:var(--text-secondary)">Só no caminho; não pare</span></div>
+<div><span style="font-weight:500">Sem marca</span><br><span style="color:var(--text-secondary)">Fora do tom: evite por agora</span></div>
+</div>
+</div>
+</div>
+</body>
+</html>
